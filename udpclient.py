@@ -5,9 +5,9 @@ server_port = int(input("Enter server port: "))#输入端口号
 
 # 创建UDP socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
+file_path = input("Enter the path of the file to send: ")#输入要发送的文件路径
 # 打开要发送的文件
-with open('C:/Temp/udpsend.txt', 'rb') as file:
+with open(file_path, 'rb') as file:
     while True:
         # 读取文件内容
         data = file.read(1024)#最多读取1024字节
